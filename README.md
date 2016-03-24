@@ -1,2 +1,3 @@
 # clrs
-this is a practice of using github
+Introduction to Alogorithms (clrs)
+
