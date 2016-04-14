@@ -10,7 +10,7 @@ typedef struct matrix {
 	int **m;
 }matrix, *mptr;
 mptr matrix_init(size_t row, size_t col, int val);
-mptr *matrixArray_init(size_t *p, size_t pSize int val);
+mptr *matrixArray_init(size_t *p, size_t pSize, int val);
 void matrix_print(mptr m);
 mptr matrix_multiply(mptr a, mptr b);
 void matrix_parenthesization(mptr *matrixArray, size_t *p, size_t pValue);
