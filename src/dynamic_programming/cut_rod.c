@@ -1,4 +1,3 @@
-#include "stdafx.h"
 #include "cut_rod.h"
 /*
 *CH15_1
