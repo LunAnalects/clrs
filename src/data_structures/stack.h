@@ -2,12 +2,14 @@
 #define CLRS_STACK_H
 #include "stdlib.h"
 #include "stdio.h"
-struct Stack{
+
+struct Stack {
 	int size;
 	int top;
 	int* arr;
 };
-void stack_init(struct Stack* s,int size);
+
+void stack_init(struct Stack* s, int size);
 int stack_empty(struct Stack* s);
 void stack_push(struct Stack* s, int e);
 int stack_pop(struct Stack* s);

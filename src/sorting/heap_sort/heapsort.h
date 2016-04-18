@@ -19,11 +19,11 @@ size = size of sorted elements.
 length = size of arr.
 */
 
-typedef struct heap_array{
+typedef struct heap_array {
 	int* arr;
 	int length;
 	int size;
-}heap;
+} heap;
 
 
 int get_heap_depth(int size);
@@ -32,8 +32,6 @@ void max_heapify(heap* A, int i);
 void build_max_heap(heap* A);
 void heapsort(int* array, int n);
 int heap_extract_max(heap* A);
-
-
 
 
 #endif

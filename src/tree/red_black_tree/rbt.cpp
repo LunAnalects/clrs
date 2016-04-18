@@ -1,5 +1,3 @@
-
-#include "stdafx.h"
 #include "rbt.h"
 
 rbtp rbt_init() {
@@ -23,7 +21,7 @@ rbtnp rbtn_init() {
 	return n;
 }
 
-void l_rotate(rbtp t,rbtnp x) {
+void l_rotate(rbtp t, rbtnp x) {
 	rbtnp y = x->r;
 	x->r = y->l;
 	if (y->l != t->nil)
@@ -78,9 +76,10 @@ void rb_insert(rbtp t, rbtnp z) {
 	z->color = red;
 	rb_insert_fixup(t, z);
 }
+
 void rb_insert_fixup(rbtp t, rbtnp z) {
 	rbtnp y;
-	while(z->p->color == red) {
+	while (z->p->color == red) {
 		if (z->p == z->p->p->l) {
 			y = z->p->p->r;
 			if (y->color == red) {
@@ -97,7 +96,7 @@ void rb_insert_fixup(rbtp t, rbtnp z) {
 			z->p->p->color = red;
 			r_rotate(t, z->p->p);
 		}
-		else{
+		else {
 			y = z->p->p->l;
 			if (y->color == red) {
 				z->p->color = black;
@@ -126,11 +125,13 @@ void rb_transplant(rbtp t, rbtnp u, rbtnp v) {
 		u->p->r = v;
 	v->p = u->p;
 }
+
 rbtnp rb_minimum(rbtp t, rbtnp h) {
 	while (h->l != t->nil)
 		h = h->l;
 	return h;
 }
+
 void rb_delete(rbtp t, rbtnp z) {
 	rbtnp y = z;
 	rbtnp x;

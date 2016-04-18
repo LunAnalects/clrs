@@ -1,4 +1,3 @@
-
 #include "bst.h"
 
 bstp bstp_init() {
@@ -6,6 +5,7 @@ bstp bstp_init() {
 	t1->root = NULL;
 	return t1;
 }
+
 bstnp bstnp_init() {
 	bstnp np1 = (bstnp)malloc(sizeof(bstn));
 	np1->d = 0;
@@ -47,6 +47,7 @@ bstnp tree_minimum(bstnp h) {
 		h = h->left;
 	return h;
 }
+
 bstnp tree_maximum(bstnp h) {
 	while (h->right != NULL)
 		h = h->right;
@@ -55,7 +56,7 @@ bstnp tree_maximum(bstnp h) {
 
 
 bstnp tree_successor(bstnp x) {
-	if (x->right != NULL) 
+	if (x->right != NULL)
 		return tree_minimum(x->right);
 
 	bstnp y = x->parent;
@@ -65,7 +66,8 @@ bstnp tree_successor(bstnp x) {
 	}
 	return y;
 }
-bstnp tree_predecessor(bstnp x){
+
+bstnp tree_predecessor(bstnp x) {
 	if (x->left != NULL)
 		return tree_maximum(x->left);
 
@@ -119,7 +121,7 @@ void tree_delete(bstp t, bstnp d) {
 void transplant(bstp t, bstnp u, bstnp v) {
 	if (u->parent == NULL)
 		t->root = v;
-	else if(u->parent->left == u)
+	else if (u->parent->left == u)
 		u->parent->left = v;
 	else
 		u->parent->right = v;

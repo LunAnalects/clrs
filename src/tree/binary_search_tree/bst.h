@@ -5,15 +5,18 @@
 #include "stdio.h"
 
 typedef int dtype;
+
 typedef struct binary_search_tree_node {
 	struct binary_search_tree_node* parent;
 	struct binary_search_tree_node* left;
 	struct binary_search_tree_node* right;
 	dtype d;
-}bstn,*bstnp;
+} bstn, *bstnp;
+
 typedef struct binary_search_tree {
 	struct binary_search_tree_node* root;
-}bst,*bstp;
+} bst, *bstp;
+
 void inorder_walk(bstnp t);
 
 bstp bstp_init();

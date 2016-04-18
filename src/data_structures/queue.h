@@ -3,7 +3,7 @@
 #include "stdlib.h"
 #include "stdio.h"
 
-struct Queue{
+struct Queue {
 	int size;
 	int head;
 	int tail;

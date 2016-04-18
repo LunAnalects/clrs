@@ -1,24 +1,24 @@
-#pragma once
 #ifndef CLRS_RBT_H
 #define CLRS_RBT_H
 
 #include "stdio.h"
 #include "stdlib.h"
 typedef int dtype;
-typedef enum {black,red}Color;
+
+typedef enum {black,red} Color;
+
 typedef struct red_black_tree_node {
 	Color color;
 	struct red_black_tree_node* l;
 	struct red_black_tree_node* r;
 	struct red_black_tree_node* p;
 	dtype d;
-}rbtn,*rbtnp;
+} rbtn, *rbtnp;
 
 typedef struct red_black_tree {
 	rbtnp root;
 	rbtnp nil;
-}rbt,*rbtp;
-
+} rbt, *rbtp;
 
 
 rbtp rbt_init();

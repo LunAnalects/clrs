@@ -11,6 +11,6 @@
      memcpy(&y,&x,       sizeof(x)); \
      memcpy(&x,swap_temp,sizeof(x)); \
     } while(0)
-    
+
 
 #endif
